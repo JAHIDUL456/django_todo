@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sign up</title>
-    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'hi.css'%}">
 </head>
 <body>
     <div class="signup_login">
@@ -13,8 +13,34 @@
             <form method="post">
                 {% csrf_token %}
                 <div class="heading">
-                    SignUp
+                    Signup
                 </div>
+                <div class="line"></div>
+                <div class="field">
+                    <b class="name">User name</b>
+                    <input type="text" class="inp" required placeholder="enter your name" name="fnm">
+                </div>
+
+                <div class="field">
+                    <b class="email">Email</b>
+                    <input type="email" required class="inp" name="email">
+                </div>
+
+                <div class="field">
+                    <b class="pass">Password</b>
+                    <input type="password" required class="inp" name="pass">
+                </div>
+
+                <div class="field">
+                    <input type="submit" class="submit-button" value="Signup">
+                </div>
+
+                <div class="field">
+                    <b>already have an account?</b>
+                    <br>
+                    <a class="anc" href="/todo/templates/login.html">Login</a>
+                </div>
+
             </form>
         </div>
     </div>
