@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'hi.css'%}">
+</head>
+<body>
+    <div class="signup_login">
+        <div class="signup_box">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="heading">
+                    Login
+                </div>
+                <div class="line"></div>
+                <div class="field">
+                    <b class="name">User name</b>
+                    <input type="text" class="inp" required placeholder="enter your name" name="fnm">
+                </div>
+
+                <div class="field">
+                    <b class="pass">Password</b>
+                    <input type="password" required class="inp" name="pass">
+                </div>
+
+                <div class="field">
+                    <input type="submit" class="submit-button" value="Signup">
+                </div>
+
+                <div class="field">
+                    <b>Don't have an account?</b>
+                    <br>
+                    <a class="anc" href="/todo/templates/signup.html">Login</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
